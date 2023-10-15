@@ -10,9 +10,6 @@ const combolimit = el("#combolimit")
 const showresults = el("#showresult")
 
 
-
- 
-
 showpost.addEventListener('click', function () {
   let url ="https://jsonplaceholder.typicode.com/posts?_limit="+combolimit.value
 
@@ -22,10 +19,11 @@ showpost.addEventListener('click', function () {
     .then((res) => res.json())
     .then((data) => {
 
-      const fileFromLocal = getStorage("image");
-      // if (fileFromLocal) {
-      //   image.src = fileFromLocal;
-      // }
+      // let fileFromLocal = "https://th.bing.com/th/id/R.6af6fd9c37f0de4abb34ea0fd20acce3?rik=55mqMmrTutVR0Q&pid=ImgRaw&r=0";//getStorage("image");
+     
+      if (fileFromLocal) {
+        image.src = fileFromLocal;
+      }
 
 
       data.forEach(element => {
