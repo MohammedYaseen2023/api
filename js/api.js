@@ -11,7 +11,7 @@ const showresults = el("#showresult")
 
 
 showpost.addEventListener('click', function () {
-  let url ="https://jsonplaceholder.typicode.com/posts?_limit="+combolimit.value
+  let url ="https://jsonplaceholder.typicode.com/posts?_limit="+combolimit.value;
 
   fetch(url, {
     method: "get",
@@ -20,6 +20,7 @@ showpost.addEventListener('click', function () {
     .then((data) => {
 
       // let fileFromLocal = "https://th.bing.com/th/id/R.6af6fd9c37f0de4abb34ea0fd20acce3?rik=55mqMmrTutVR0Q&pid=ImgRaw&r=0";//getStorage("image");
+      let fileFromLocal = getStorage("image");
      
       if (fileFromLocal) {
         image.src = fileFromLocal;
