@@ -15,7 +15,7 @@ showpost.addEventListener('click', function () {
 
   fetch(url, {
     method: "get",
-  })
+  }) 
     .then((res) => res.json())
     .then((data) => {
 
