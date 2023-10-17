@@ -26,7 +26,7 @@ showpost.addEventListener('click', function () {
         image.src = fileFromLocal;
       }
 
-
+      
       data.forEach(element => {
 
         showresults.innerHTML += `
@@ -37,7 +37,7 @@ showpost.addEventListener('click', function () {
           <p> User Id : ${element.userId}</p>
           <p>${element.body}</p>  
           </div>
-          <div class="  ">
+          <div class=" p-2  ">
           <img src="${fileFromLocal}" alt="" id="img" height="300" width="300"> 
           </div> 
         </div>
