@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-         
-    #file {
-        opacity: 1;
-        position: relative;
-          display: none; 
-      }
-         
-    </style>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>api posts</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+<style>
+    #file {
+        opacity: 1;
+        position: relative;
+        display: none;
+    }
+</style>
+
 <body>
-    <button type="button" class="btn btn-outline-primary " id ="def_image">Add Default Image</button>
-    <button type="button" class="btn btn-outline-secondary" id="showposts">Show Posts</button>
- 
-    <label>Limit results by: </label>
-    
-        <select class="editableBox" id ="combolimit">        
-            <option value="10">10</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-            <option value="40">40</option>
-            <option value="50">50</option>
-            <option value="60">60</option>
-            <option value="70">70</option>
-            <option value="80">80</option>
-            <option value="90">90</option>
-            <option value="100">100</option>
+    <div class=" col-12 " >
+        <!-- <div class=" col-sm-1 col-lg-2"> -->
 
-        </select>
-    
+            <button type="button" class="btn btn-outline-primary " id="def_image">Add Default Image</button>
+            <button type="button" class="btn btn-outline-secondary" id="showposts">Show Posts</button>
+        <!-- </div> -->
 
+        <!-- <div class="col-sm-1 col-lg-2"> -->
+            <label>Limit results by: </label>
 
-    <input id="file" type="file" accept="image/png, image/jpeg" />
-    <div class=" row" id="showresult">
-        
-        <img src="" alt="No image" id="img" height="0" width="0">
+            <select class="editableBox" id="combolimit">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+                <option value="90">90</option>
+                <option value="100">100</option>
+
+            </select>
+        <!-- </div> -->
+
+        <!-- <div  class="col-sm-1 col-lg-2"> -->
+
+            <input id="file" type="file" accept="image/png, image/jpeg" />
+            <div class="  col-12 col-sm-12" id="showresult">
+
+                <img src="" alt="No image" id="img" height="0" width="0">
+            </div>
+        <!-- </div> -->
     </div>
-    <script type="module" src="js/api.js"></script>
-    
+        <script type="module" src="js/api.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
+
 </html>

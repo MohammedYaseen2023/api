@@ -1,6 +1,6 @@
 
 import { el, getStorage, setStorage, fileToBase64 } from "./helpers.js";
-
+// import Toastify from 'toastify-js';
 
 const file = el("#file");
 const fileBtn = el("#def_image");
@@ -30,18 +30,28 @@ showpost.addEventListener('click', function () {
       data.forEach(element => {
 
         showresults.innerHTML += `
-          <div class="col-6  card" id ="posts_card" >  
-              <h2 >${element.title}</h2>
-              <p> id : ${element.id}</p>
-              <p> User Id : ${element.userId}</p>
-              <p>${element.body}</p>  
+        <div class="" >
+          <div class="   card" id ="posts_card" >  
+          <h2 >${element.title}</h2>
+          <p> id : ${element.id}</p>
+          <p> User Id : ${element.userId}</p>
+          <p>${element.body}</p>  
           </div>
-          <div class="col-6">
-                  <img src="${fileFromLocal}" alt="" id="img" height="300" width="300"> 
+          <div class="  ">
+          <img src="${fileFromLocal}" alt="" id="img" height="300" width="300"> 
           </div> 
+        </div>
       `
          
       });
+
+      Toastify({
+
+        text: "Download posts completed",
+        
+        duration: 3000
+        
+        }).showToast();
 
     });
 })
