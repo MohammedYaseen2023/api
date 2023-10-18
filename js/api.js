@@ -26,28 +26,29 @@ showpost.addEventListener('click', function () {
         image.src = fileFromLocal;
       }
 
-      
+      showresults.innerHTML  =`
+      <div> </div>
+      `
       data.forEach(element => {
 
-        showresults.innerHTML += `
-        <div class="" >
-          <div class="   card" id ="posts_card" >  
-          <h2 >${element.title}</h2>
-          <p> id : ${element.id}</p>
-          <p> User Id : ${element.userId}</p>
-          <p>${element.body}</p>  
+     
+    showresults.innerHTML += `
+      <div class=" col-12 col-sm-4 p-sm-2">
+          <div class="card " style="width:  100%;" id="posts_card">
+              <img src="${fileFromLocal}" class="card-img-top" alt="...">
+              <div class=" card-body">
+                  <h5 class="card-title">${element.title}</h5>
+                  <p class="card-text">id : ${element.id} - User Id : ${element.userId}</p>
+                  <p class="card-text">${element.body}</p>
+              </div>
           </div>
-          <div class=" p-2  ">
-          <img src="${fileFromLocal}" alt="" id="img" height="300" width="300"> 
-          </div> 
-        </div>
-      `
-         
+      </div>
+    `
       });
 
       Toastify({
 
-        text: "Download posts completed",
+        text: "posts Download completed",
         
         duration: 3000
         
